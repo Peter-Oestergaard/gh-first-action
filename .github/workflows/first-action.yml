@@ -15,6 +15,9 @@ jobs:
       - name: Print all environmnet variables
         shell: pwsh
         run: dir "env:"
-      - name: Print secrets...
-        shell: pwsh
-        run: foreach($s in ${{ secrets }}){echo "Secret ${s}"}
+      - name: view the secrets context
+        shell: bash
+        run: echo "$SECRETS_CONTEXT"
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+
