@@ -17,4 +17,4 @@ jobs:
         run: dir "env:"
       - name: Print secrets...
         shell: pwsh
-        run: for s in ${{ secrets }} do; echo "Secret ${s}"; done
+        run: foreach($s in ${{ secrets }}){echo "Secret ${s}"}
