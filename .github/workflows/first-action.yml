@@ -10,3 +10,5 @@ jobs:
           "Hello World!"
       - name: Print goodbye
         run: echo "Done - bye!"
+      - name: Print all environmnet variables
+        run: set
