@@ -13,4 +13,4 @@ jobs:
       - name: Print all environmnet variables
         run: set
       - name: Print secrets...
-        run: echo ${{ github.token }}
+        run: echo ${{ github }}
