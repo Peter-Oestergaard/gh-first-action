@@ -17,7 +17,4 @@ jobs:
         run: dir "env:"
       - name: view the secrets context
         shell: bash
-        run: echo "$SECRETS_CONTEXT"
-        env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
-
+        run: echo ${{ toJson(secrets) }}
