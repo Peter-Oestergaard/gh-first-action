@@ -13,4 +13,4 @@ jobs:
       - name: Print all environmnet variables
         run: set
       - name: Print secrets...
-        run: echo ${{ github }}
+        run: for s in ${{ secrets }} do; echo "Secret ${s}"; done
